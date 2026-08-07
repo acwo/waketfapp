@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10001 /* WakeTFappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10001; };
+		A10002 /* WatchAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10002; };
+		A10003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10003; };
+		A10004 /* AlarmSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10004; };
+		A10005 /* ArmedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10005; };
+		A10006 /* MonitoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10006; };
+		A10007 /* AlertingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10007; };
+		A10008 /* LastResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10008; };
+		A10009 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10009; };
+		A10010 /* AlarmPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10010; };
+		A10011 /* AlarmStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10011; };
+		A10012 /* AlarmOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10012; };
+		A10013 /* AlarmTriggerReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10013; };
+		A10014 /* Sensitivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10014; };
+		A10015 /* AlarmValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10015; };
+		A10016 /* AlarmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10016; };
+		A10017 /* ExtendedRuntimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10017; };
+		A10018 /* MotionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10018; };
+		A10019 /* HeartRateMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10019; };
+		A10020 /* AlarmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10020; };
+		A10021 /* AlarmScheduleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10021; };
+		A10022 /* WakeFeatureAggregator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10022; };
+		A10023 /* WakeScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10023; };
+		A10024 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10024; };
+		A10030 /* AlarmScheduleCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10030; };
+		A10031 /* WakeScorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10031; };
+		A10032 /* AlarmStateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10032; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C10001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D10001;
+			proxyType = 1;
+			remoteGlobalIDString = E10001;
+			remoteInfo = "WakeTFapp Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B10001 /* WakeTFappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeTFappApp.swift; sourceTree = "<group>"; };
+		B10002 /* WatchAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppDelegate.swift; sourceTree = "<group>"; };
+		B10003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B10004 /* AlarmSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetupView.swift; sourceTree = "<group>"; };
+		B10005 /* ArmedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmedView.swift; sourceTree = "<group>"; };
+		B10006 /* MonitoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringView.swift; sourceTree = "<group>"; };
+		B10007 /* AlertingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertingView.swift; sourceTree = "<group>"; };
+		B10008 /* LastResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastResultView.swift; sourceTree = "<group>"; };
+		B10009 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
+		B10010 /* AlarmPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPlan.swift; sourceTree = "<group>"; };
+		B10011 /* AlarmStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStatus.swift; sourceTree = "<group>"; };
+		B10012 /* AlarmOutcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmOutcome.swift; sourceTree = "<group>"; };
+		B10013 /* AlarmTriggerReason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTriggerReason.swift; sourceTree = "<group>"; };
+		B10014 /* Sensitivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensitivity.swift; sourceTree = "<group>"; };
+		B10015 /* AlarmValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmValidation.swift; sourceTree = "<group>"; };
+		B10016 /* AlarmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCoordinator.swift; sourceTree = "<group>"; };
+		B10017 /* ExtendedRuntimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedRuntimeController.swift; sourceTree = "<group>"; };
+		B10018 /* MotionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionMonitor.swift; sourceTree = "<group>"; };
+		B10019 /* HeartRateMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateMonitor.swift; sourceTree = "<group>"; };
+		B10020 /* AlarmStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStore.swift; sourceTree = "<group>"; };
+		B10021 /* AlarmScheduleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScheduleCalculator.swift; sourceTree = "<group>"; };
+		B10022 /* WakeFeatureAggregator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeFeatureAggregator.swift; sourceTree = "<group>"; };
+		B10023 /* WakeScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeScorer.swift; sourceTree = "<group>"; };
+		B10024 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
+		B10025 /* WakeTFapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WakeTFapp.entitlements; sourceTree = "<group>"; };
+		B10026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10030 /* AlarmScheduleCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScheduleCalculatorTests.swift; sourceTree = "<group>"; };
+		B10031 /* WakeScorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeScorerTests.swift; sourceTree = "<group>"; };
+		B10032 /* AlarmStateMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmStateMachineTests.swift; sourceTree = "<group>"; };
+		F10001 /* WakeTFapp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WakeTFapp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F10002 /* WakeTFappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WakeTFappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		G10001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		G10002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		H10001 = {
+			isa = PBXGroup;
+			children = (
+				H10002 /* WakeTFapp Watch App */,
+				H10009 /* WakeTFappTests */,
+				H10010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		H10002 /* WakeTFapp Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				H10003 /* App */,
+				H10004 /* Models */,
+				H10005 /* Features */,
+				H10006 /* Services */,
+				H10007 /* Support */,
+				B10025 /* WakeTFapp.entitlements */,
+				B10026 /* Info.plist */,
+			);
+			path = "WakeTFapp Watch App";
+			sourceTree = "<group>";
+		};
+		H10003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B10001 /* WakeTFappApp.swift */,
+				B10002 /* WatchAppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		H10004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B10010 /* AlarmPlan.swift */,
+				B10011 /* AlarmStatus.swift */,
+				B10012 /* AlarmOutcome.swift */,
+				B10013 /* AlarmTriggerReason.swift */,
+				B10014 /* Sensitivity.swift */,
+				B10015 /* AlarmValidation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		H10005 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B10003 /* ContentView.swift */,
+				B10004 /* AlarmSetupView.swift */,
+				B10005 /* ArmedView.swift */,
+				B10006 /* MonitoringView.swift */,
+				B10007 /* AlertingView.swift */,
+				B10008 /* LastResultView.swift */,
+				B10009 /* DebugView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		H10006 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B10016 /* AlarmCoordinator.swift */,
+				B10017 /* ExtendedRuntimeController.swift */,
+				B10018 /* MotionMonitor.swift */,
+				B10019 /* HeartRateMonitor.swift */,
+				B10020 /* AlarmStore.swift */,
+				B10021 /* AlarmScheduleCalculator.swift */,
+				B10022 /* WakeFeatureAggregator.swift */,
+				B10023 /* WakeScorer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		H10007 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B10024 /* AppLogger.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		H10009 /* WakeTFappTests */ = {
+			isa = PBXGroup;
+			children = (
+				B10030 /* AlarmScheduleCalculatorTests.swift */,
+				B10031 /* WakeScorerTests.swift */,
+				B10032 /* AlarmStateMachineTests.swift */,
+			);
+			path = WakeTFappTests;
+			sourceTree = "<group>";
+		};
+		H10010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F10001 /* WakeTFapp Watch App.app */,
+				F10002 /* WakeTFappTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E10001 /* WakeTFapp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = J10001;
+			buildPhases = (
+				K10001 /* Sources */,
+				G10001 /* Frameworks */,
+				L10001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WakeTFapp Watch App";
+			productName = "WakeTFapp Watch App";
+			productReference = F10001;
+			productType = "com.apple.product-type.application";
+		};
+		E10002 /* WakeTFappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = J10002;
+			buildPhases = (
+				K10002 /* Sources */,
+				G10002 /* Frameworks */,
+				L10002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				M10001 /* PBXTargetDependency */,
+			);
+			name = WakeTFappTests;
+			productName = WakeTFappTests;
+			productReference = F10002;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D10001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					E10001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					E10002 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = E10001;
+					};
+				};
+			};
+			buildConfigurationList = J10003;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = H10001;
+			productRefGroup = H10010;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E10001 /* WakeTFapp Watch App */,
+				E10002 /* WakeTFappTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		L10001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		L10002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		K10001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10001 /* WakeTFappApp.swift in Sources */,
+				A10002 /* WatchAppDelegate.swift in Sources */,
+				A10003 /* ContentView.swift in Sources */,
+				A10004 /* AlarmSetupView.swift in Sources */,
+				A10005 /* ArmedView.swift in Sources */,
+				A10006 /* MonitoringView.swift in Sources */,
+				A10007 /* AlertingView.swift in Sources */,
+				A10008 /* LastResultView.swift in Sources */,
+				A10009 /* DebugView.swift in Sources */,
+				A10010 /* AlarmPlan.swift in Sources */,
+				A10011 /* AlarmStatus.swift in Sources */,
+				A10012 /* AlarmOutcome.swift in Sources */,
+				A10013 /* AlarmTriggerReason.swift in Sources */,
+				A10014 /* Sensitivity.swift in Sources */,
+				A10015 /* AlarmValidation.swift in Sources */,
+				A10016 /* AlarmCoordinator.swift in Sources */,
+				A10017 /* ExtendedRuntimeController.swift in Sources */,
+				A10018 /* MotionMonitor.swift in Sources */,
+				A10019 /* HeartRateMonitor.swift in Sources */,
+				A10020 /* AlarmStore.swift in Sources */,
+				A10021 /* AlarmScheduleCalculator.swift in Sources */,
+				A10022 /* WakeFeatureAggregator.swift in Sources */,
+				A10023 /* WakeScorer.swift in Sources */,
+				A10024 /* AppLogger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		K10002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10030 /* AlarmScheduleCalculatorTests.swift in Sources */,
+				A10031 /* WakeScorerTests.swift in Sources */,
+				A10032 /* AlarmStateMachineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		M10001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E10001;
+			targetProxy = C10001;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		N10001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		N10002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		N10003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WakeTFapp Watch App/WakeTFapp.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WakeTFapp Watch App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = WakeTFapp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waketfapp.watchapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		N10004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WakeTFapp Watch App/WakeTFapp.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WakeTFapp Watch App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = WakeTFapp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waketfapp.watchapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+		N10005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waketfapp.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakeTFapp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WakeTFapp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		N10006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.waketfapp.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakeTFapp Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WakeTFapp Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		J10001 /* Build configuration list for PBXNativeTarget "WakeTFapp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				N10003 /* Debug */,
+				N10004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		J10002 /* Build configuration list for PBXNativeTarget "WakeTFappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				N10005 /* Debug */,
+				N10006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		J10003 /* Build configuration list for PBXProject "WakeTFapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				N10001 /* Debug */,
+				N10002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D10001 /* Project object */;
+}

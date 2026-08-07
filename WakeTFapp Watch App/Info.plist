@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSHealthShareUsageDescription</key>
+	<string>WakeTFapp reads recent heart-rate samples during your wake window to improve alarm timing. The data stays on this Apple Watch.</string>
+	<key>NSMotionUsageDescription</key>
+	<string>WakeTFapp uses wrist movement during your wake window to choose a gentler time to wake you.</string>
+	<key>WKApplication</key>
+	<true/>
+	<key>WKWatchOnly</key>
+	<true/>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>alarm</string>
+	</array>
+</dict>
+</plist>
