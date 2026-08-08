@@ -172,9 +172,9 @@ final class AlarmStateMachineTests: XCTestCase {
 	}
 
 	func testSensitivityThresholds() {
-		XCTAssertEqual(Sensitivity.low.threshold, 0.80)
-		XCTAssertEqual(Sensitivity.normal.threshold, 0.68)
-		XCTAssertEqual(Sensitivity.high.threshold, 0.56)
+		XCTAssertEqual(Sensitivity.low.threshold, 0.52)
+		XCTAssertEqual(Sensitivity.normal.threshold, 0.38)
+		XCTAssertEqual(Sensitivity.high.threshold, 0.25)
 		XCTAssertGreaterThan(Sensitivity.low.threshold, Sensitivity.normal.threshold)
 		XCTAssertGreaterThan(Sensitivity.normal.threshold, Sensitivity.high.threshold)
 	}

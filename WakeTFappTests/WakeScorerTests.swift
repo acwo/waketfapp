@@ -38,7 +38,7 @@ final class WakeScorerTests: XCTestCase {
 		)
 
 		XCTAssertTrue(score.isAboveThreshold)
-		XCTAssertGreaterThan(score.combinedScore, 0.68)
+		XCTAssertGreaterThan(score.combinedScore, Sensitivity.normal.threshold)
 	}
 
 	func testStaleHeartRateIgnored() {
@@ -101,7 +101,7 @@ final class WakeScorerTests: XCTestCase {
 	func testNoTriggerDuringWarmup() {
 		let features = makeAggregated(
 			rms: 0.3, variance: 0.15, peak: 0.7, bursts: 3,
-			elapsedSinceStart: 60, windowIndex: 3
+			elapsedSinceStart: 30, windowIndex: 2
 		)
 		let baseline = WakeScorer.Baseline(motionRMSMedian: 0.02, motionRMSMAD: 0.01, heartRateMedian: nil)
 
@@ -115,8 +115,8 @@ final class WakeScorerTests: XCTestCase {
 
 	func testStrongBurstBypassesWarmup() {
 		let features = makeAggregated(
-			rms: 1.5, variance: 0.8, peak: 2.5, bursts: 8,
-			elapsedSinceStart: 60, windowIndex: 3
+			rms: 1.5, variance: 0.8, peak: 1.5, bursts: 8,
+			elapsedSinceStart: 40, windowIndex: 3
 		)
 		let baseline = WakeScorer.Baseline(motionRMSMedian: 0.02, motionRMSMAD: 0.01, heartRateMedian: nil)
 

@@ -9,9 +9,9 @@ enum Sensitivity: String, Codable, CaseIterable, Sendable, Identifiable {
 
 	var threshold: Double {
 		switch self {
-		case .low: return 0.80
-		case .normal: return 0.68
-		case .high: return 0.56
+		case .low: return 0.52
+		case .normal: return 0.38
+		case .high: return 0.25
 		}
 	}
 

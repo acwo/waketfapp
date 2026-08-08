@@ -19,9 +19,9 @@ struct WakeScore: Sendable, Equatable {
 }
 
 struct WakeScorer: Sendable {
-	private let strongBurstThreshold: Double = 1.2
-	private let warmupDuration: TimeInterval = 150
-	private let strongBurstBypassThreshold: Double = 2.0
+	private let strongBurstThreshold: Double = 0.8
+	private let warmupDuration: TimeInterval = 60
+	private let strongBurstBypassThreshold: Double = 1.2
 
 	struct Baseline: Sendable {
 		let motionRMSMedian: Double
@@ -99,16 +99,16 @@ struct WakeScorer: Sendable {
 		let rmsComponent: Double
 		if baseline.motionRMSMAD > 0 {
 			let deviation = (features.rmsAcceleration - baseline.motionRMSMedian) / baseline.motionRMSMAD
-			rmsComponent = min(max(deviation / 5.0, 0), 1.0)
+			rmsComponent = min(max(deviation / 2.5, 0), 1.0)
 		} else {
-			rmsComponent = min(features.rmsAcceleration / 0.3, 1.0)
+			rmsComponent = min(features.rmsAcceleration / 0.15, 1.0)
 		}
 
-		let burstComponent = min(Double(features.movementBurstCount) / 5.0, 1.0)
+		let burstComponent = min(Double(features.movementBurstCount) / 3.0, 1.0)
 
 		let peakComponent = min(features.peakMagnitude / strongBurstThreshold, 1.0)
 
-		let orientationComponent = min(features.orientationChangeMagnitude / 2.0, 1.0)
+		let orientationComponent = min(features.orientationChangeMagnitude / 1.0, 1.0)
 
 		return rmsComponent * 0.35 + burstComponent * 0.25 + peakComponent * 0.25 + orientationComponent * 0.15
 	}
