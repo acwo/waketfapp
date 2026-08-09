@@ -13,11 +13,10 @@ struct AlarmSetupView: View {
 	@State private var isArming: Bool = false
 	@State private var showLastResult: Bool = false
 	@State private var isUpdatingLinkedTime: Bool = false
+	@State private var windowMinutes: Int = 30
 	#if DEBUG
 	@State private var showDebug: Bool = false
 	#endif
-
-	private let windowMinutes = 30
 
 	private var windowDuration: Int {
 		let earliestMinutes = earliestHour * 60 + earliestMinute
@@ -61,7 +60,6 @@ struct AlarmSetupView: View {
 					durationInfo
 					settingsSection
 					permissionStatus
-					platformNote
 					validationMessage
 					armButton
 					lastResultButton
@@ -165,16 +163,31 @@ struct AlarmSetupView: View {
 	}
 
 	private var durationInfo: some View {
-		HStack {
-			Text(String(localized: "window_label", defaultValue: "Window:"))
-				.font(.caption)
+		VStack(spacing: 4) {
+			HStack {
+				Text(String(localized: "window_label", defaultValue: "Window:"))
+					.font(.caption)
+					.foregroundStyle(.secondary)
+				Picker("", selection: $windowMinutes) {
+					ForEach(Array(stride(from: 5, through: 30, by: 5)), id: \.self) { m in
+						Text("\(m) min").tag(m)
+					}
+				}
+				.frame(width: 80, height: 44)
+				.clipShape(Rectangle())
+				.compositingGroup()
+				Spacer()
+			}
+			.onChange(of: windowMinutes) { _, _ in
+				guard !isUpdatingLinkedTime else { return }
+				isUpdatingLinkedTime = true
+				updateLatestFromEarliest()
+				isUpdatingLinkedTime = false
+			}
+			Text("Max 30 min (watchOS limit)")
+				.font(.caption2)
 				.foregroundStyle(.secondary)
-			Text("\(windowDuration) min")
-				.font(.callout)
-				.fontWeight(.medium)
-				.foregroundStyle(isWindowValid ? Color.primary : Color.red)
-				.accessibilityValue("\(windowDuration) minutes")
-			Spacer()
+				.frame(maxWidth: .infinity, alignment: .leading)
 		}
 	}
 
@@ -231,13 +244,6 @@ struct AlarmSetupView: View {
 			}
 		}
 		.frame(maxWidth: .infinity, alignment: .leading)
-	}
-
-	private var platformNote: some View {
-		Text(String(localized: "platform_note", defaultValue: "Max 30-min window (watchOS limit)"))
-			.font(.caption2)
-			.foregroundStyle(.secondary)
-			.frame(maxWidth: .infinity, alignment: .leading)
 	}
 
 	@ViewBuilder
