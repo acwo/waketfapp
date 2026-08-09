@@ -12,9 +12,12 @@ struct AlarmSetupView: View {
 	@State private var errorMessage: String?
 	@State private var isArming: Bool = false
 	@State private var showLastResult: Bool = false
+	@State private var isUpdatingLinkedTime: Bool = false
 	#if DEBUG
 	@State private var showDebug: Bool = false
 	#endif
+
+	private let windowMinutes = 30
 
 	private var windowDuration: Int {
 		let earliestMinutes = earliestHour * 60 + earliestMinute
@@ -27,6 +30,19 @@ struct AlarmSetupView: View {
 
 	private var isWindowValid: Bool {
 		windowDuration >= 5 && windowDuration <= 30
+	}
+
+	private func updateLatestFromEarliest() {
+		let totalMinutes = (earliestHour * 60 + earliestMinute + windowMinutes) % (24 * 60)
+		latestHour = totalMinutes / 60
+		latestMinute = totalMinutes % 60
+	}
+
+	private func updateEarliestFromLatest() {
+		var totalMinutes = latestHour * 60 + latestMinute - windowMinutes
+		if totalMinutes < 0 { totalMinutes += 24 * 60 }
+		earliestHour = totalMinutes / 60
+		earliestMinute = totalMinutes % 60
 	}
 
 	private var healthPermissionStatus: String {
@@ -90,6 +106,18 @@ struct AlarmSetupView: View {
 				.frame(width: 60, height: 70)
 				.accessibilityLabel("Earliest minute")
 			}
+			.onChange(of: earliestHour) { _, _ in
+				guard !isUpdatingLinkedTime else { return }
+				isUpdatingLinkedTime = true
+				updateLatestFromEarliest()
+				isUpdatingLinkedTime = false
+			}
+			.onChange(of: earliestMinute) { _, _ in
+				guard !isUpdatingLinkedTime else { return }
+				isUpdatingLinkedTime = true
+				updateLatestFromEarliest()
+				isUpdatingLinkedTime = false
+			}
 
 			HStack {
 				Text(String(localized: "latest_label", defaultValue: "Latest"))
@@ -115,6 +143,18 @@ struct AlarmSetupView: View {
 				.frame(width: 60, height: 70)
 				.accessibilityLabel("Latest minute")
 			}
+			.onChange(of: latestHour) { _, _ in
+				guard !isUpdatingLinkedTime else { return }
+				isUpdatingLinkedTime = true
+				updateEarliestFromLatest()
+				isUpdatingLinkedTime = false
+			}
+			.onChange(of: latestMinute) { _, _ in
+				guard !isUpdatingLinkedTime else { return }
+				isUpdatingLinkedTime = true
+				updateEarliestFromLatest()
+				isUpdatingLinkedTime = false
+			}
 		}
 	}
 
@@ -134,15 +174,20 @@ struct AlarmSetupView: View {
 
 	private var settingsSection: some View {
 		VStack(spacing: 8) {
-			Picker(
-				String(localized: "sensitivity_label", defaultValue: "Sensitivity"),
-				selection: $sensitivity
-			) {
-				ForEach(Sensitivity.allCases) { s in
-					Text(s.localizedName).tag(s)
+			VStack(spacing: 4) {
+				Text(String(localized: "sensitivity_label", defaultValue: "Sensitivity"))
+					.font(.caption)
+					.foregroundStyle(.secondary)
+					.frame(maxWidth: .infinity, alignment: .leading)
+				Picker("", selection: $sensitivity) {
+					ForEach(Sensitivity.allCases) { s in
+						Text(s.localizedName).tag(s)
+					}
 				}
+				.pickerStyle(.wheel)
+				.frame(height: 60)
+				.accessibilityHint(sensitivity.localizedDescription)
 			}
-			.accessibilityHint(sensitivity.localizedDescription)
 
 			Text(sensitivity.localizedDescription)
 				.font(.caption2)
