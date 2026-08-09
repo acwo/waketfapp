@@ -190,8 +190,7 @@ struct AlarmSetupView: View {
 						Text(s.localizedName).tag(s)
 					}
 				}
-				.pickerStyle(.wheel)
-				.frame(height: 50)
+				.frame(width: 120, height: 44)
 				.clipShape(Rectangle())
 				.compositingGroup()
 				.accessibilityHint(sensitivity.localizedDescription)
