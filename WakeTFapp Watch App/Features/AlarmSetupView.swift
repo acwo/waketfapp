@@ -94,7 +94,8 @@ struct AlarmSetupView: View {
 						Text(String(format: "%02d", h)).tag(h)
 					}
 				}
-				.frame(width: 60, height: 70)
+				.frame(width: 50, height: 44)
+				.clipShape(Rectangle())
 				.accessibilityLabel("Earliest hour")
 				Text(":")
 					.font(.title3)
@@ -103,9 +104,11 @@ struct AlarmSetupView: View {
 						Text(String(format: "%02d", m)).tag(m)
 					}
 				}
-				.frame(width: 60, height: 70)
+				.frame(width: 50, height: 44)
+				.clipShape(Rectangle())
 				.accessibilityLabel("Earliest minute")
 			}
+			.compositingGroup()
 			.onChange(of: earliestHour) { _, _ in
 				guard !isUpdatingLinkedTime else { return }
 				isUpdatingLinkedTime = true
@@ -131,7 +134,8 @@ struct AlarmSetupView: View {
 						Text(String(format: "%02d", h)).tag(h)
 					}
 				}
-				.frame(width: 60, height: 70)
+				.frame(width: 50, height: 44)
+				.clipShape(Rectangle())
 				.accessibilityLabel("Latest hour")
 				Text(":")
 					.font(.title3)
@@ -140,9 +144,11 @@ struct AlarmSetupView: View {
 						Text(String(format: "%02d", m)).tag(m)
 					}
 				}
-				.frame(width: 60, height: 70)
+				.frame(width: 50, height: 44)
+				.clipShape(Rectangle())
 				.accessibilityLabel("Latest minute")
 			}
+			.compositingGroup()
 			.onChange(of: latestHour) { _, _ in
 				guard !isUpdatingLinkedTime else { return }
 				isUpdatingLinkedTime = true
@@ -185,7 +191,9 @@ struct AlarmSetupView: View {
 					}
 				}
 				.pickerStyle(.wheel)
-				.frame(height: 60)
+				.frame(height: 50)
+				.clipShape(Rectangle())
+				.compositingGroup()
 				.accessibilityHint(sensitivity.localizedDescription)
 			}
 
